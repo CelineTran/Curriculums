@@ -62,7 +62,7 @@ Amazon Developer Console (ADC, Front-End)
 
 ## Coding (Lambda): 
 
-https://github.com/CelineTran/Genius_Camp_Alexa/tree/master/NodeJs_Template
+https://github.com/CelineTran/Curriculums/tree/master/Amazon%20Alexa/NodeJs_Template
 
 ## Function Setup: 
 
