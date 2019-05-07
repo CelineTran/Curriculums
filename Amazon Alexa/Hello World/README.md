@@ -1,5 +1,7 @@
 # Hello World Lab 
 
+https://docs.google.com/document/d/1FC8oOAS2pC8Hy75Ko0AKefglhapDy1Nei57dbKGsOqo/edit?usp=sharing
+
 ## Key Goals
     Achieving simple output, navigating through Amazon Developer Console and AWS Lambda
     
