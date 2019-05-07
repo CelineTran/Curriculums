@@ -63,7 +63,7 @@ https://docs.google.com/document/d/1FC8oOAS2pC8Hy75Ko0AKefglhapDy1Nei57dbKGsOqo/
 
 
 ## Coding (Lambda): 
-  https://github.com/CelineTran/Curriculums/AmazonAlexa/NodeJs_Template
+  https://github.com/CelineTran/Curriculums/blob/master/Amazon%20Alexa/NodeJs_Template/template_index.js
 
 ## Function Setup: 
 
