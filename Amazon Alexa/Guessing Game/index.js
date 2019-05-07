@@ -17,8 +17,8 @@ const FALLBACK_MESSAGE = 'I dont recognize that';
 
 const handlers = {
     'LaunchRequest': function () {
-      var speechOutput = "Welcome to Celine’s guessing game, I am thinking of a number between 1 and 10. Try guessing what number I’m thinking of";
-      this.attributes.myNumber = Math.floor(Math.random()*10 + 1)); 
+      var speechOutput = "Welcome to Guessing Game. To start say 'ready'";
+      this.attributes.computerNumber = Math.floor(Math.random()*10 +1); 
       this.response.speak(speechOutput).listen("What would you like to do?");
       this.emit(':responseReady');
     },
@@ -26,15 +26,15 @@ const handlers = {
         var userGuess = this.event.request.intent.slots.myGuess.value; 
         var speechOutput; 
         if(userGuess == this.attributes.myNumber){
-            speechOutput = "You are correct!"
+            speechOutput = "You are correct!"; 
         }
         else if(userGuess > this.attributes.myNumber){
-            speechOutput = "Too high, try again!"
+            speechOutput = "Too high, try again!"; 
         }
         else {
-            speechOutput = "Too low, try again!"
+            speechOutput = "Too low, try again!"; 
         }
-        var speechReprompt = "Let me say this again, this is my very first intent";
+        var speechReprompt = "";
         this.response.speak(speechOutput).listen(speechReprompt);
         this.emit(':responseReady');
     },
