@@ -2,10 +2,12 @@
 
 https://docs.google.com/document/d/1h3V2_Zxlzdlb0bGS0cEK15Omt0JSErQksc5fK5hO7dg/edit?usp=sharing
 
-## Key Idea(s): using Math.random(), if-else statements, operators, and slots
+## Key Idea(s): 
+	using Math.random(), if-else statements, operators, and slots
 
 ## Setup: 
-	Amazon Developer Console (ADC, Front-End)
+
+Amazon Developer Console (ADC, Front-End)
 
 1. Create Skill, Skill Name: Guessing Game
 2. Select “custom” as your model
