@@ -17,7 +17,8 @@ const FALLBACK_MESSAGE = 'I dont recognize that';
 
 const handlers = {
     'LaunchRequest': function () {
-      var speechOutput = "Welcome to Guessing Game. To start say 'ready'";
+      var speechOutput = "Welcome to Celine’s guessing game, I am thinking of a number between 1 and 10. Try guessing what number I’m thinking of";
+      this.attributes.myNumber = Math.floor(Math.random()*10 + 1)); 
       this.response.speak(speechOutput).listen("What would you like to do?");
       this.emit(':responseReady');
     },
