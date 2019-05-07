@@ -1,7 +1,7 @@
 # Amazon Alexa
 Alexa templates and files 
 
-# Amazon Sound Clip Library
+## Amazon Sound Clip Library
 
 https://developer.amazon.com/docs/custom-skills/ask-soundlibrary.html
 
@@ -10,7 +10,7 @@ Alexa allows you to include sound bytes to your skill that can be used across al
 #### Sound clips must come from a website that has `https` in the url.
 #### Sound clips must be `.mp3` format
 
-# Speech Synthesis Markup Language (SSML) Reference
+## Speech Synthesis Markup Language (SSML) Reference
 
 https://developer.amazon.com/docs/custom-skills/speech-synthesis-markup-language-ssml-reference.html
 
