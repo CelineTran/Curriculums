@@ -82,18 +82,45 @@ https://github.com/CelineTran/Curriculums/tree/master/Amazon%20Alexa/NodeJs_Temp
    Change the Alexa’s speech output on line 20 but editing the text inside the quotation marks
    “Welcome to Celine’s guessing game, I am thinking of a number between 1 and 10. Try guessing what number I’m thinking of”. 
 
-2. On line 24, labeled ‘MyFirstIntent” 
+2. Now we must add an “Attribute” 
+   Attributes make a variable within one intent, “global”, allowing the scope of this variable to be extended to the entire      program. This “attribute” will hold the computer’s random number between 1-10. To do so we add this code under our speechOuput. 
+
+Math.random() creates a number between 0 and 1, so we first need to multiply that by 10 to expand our range to 0-10. We then need to add 1 so that we get ranges 1(inclusive)-11(exclusive) -> [1,11). So finally, we need to turn it into an integer (whole number) by using Math.floor(). 
+
+	this.attributes.computerNumber = Math.floor(Math.random()*10+1); 
+
+3. On line 26, labeled ‘MyFirstIntent” 
    Change that to the custom intent we created (GuessIntent)
    Remove the words inside the double quotes, as we don’t want to output that speech yet.
    
-   ‘GuessIntent’: function () {
-        var speechOutput = "";
-        var speechReprompt = "";
-        this.response.speak(speechOutput).listen(speechReprompt);
-        this.emit(':responseReady');
-    },
+4. Here is where the coding gets more interesting. 
+5. Now that Alexa randomly picks her number, we need to retrieve the value that the user chooses by accessing the slot we created in the front end. To do so, we create a variable called ‘userGuess’ to store the slot value. 
 
-3. Save and test!
+		var userGuess = this.event.request.intent.slots.myGuess.value;  
+
+6. Here’s where the coding gets fun! In order for Alexa to check if your guess was correct, we have to use If-Else Statements! If-Else statements are conditional statements that execute specific coding blocks only under certain conditions. These are very helpful when the input/output of our program is dynamic. 
+
+The most crucial part of the If-Else Statements is the condition. In our guessing game, we have to check if the userGuess is equivalent to the computerNumber. To do so, we start with something like this 
+
+	if (userGuess == this.attributes.computerNumber){
+
+	}
+	else{
+
+	}
+
+
+7. Then we want to fill in the if section, separated by the curly braces, with the speechOutput that correlates the condition. So if userGuess is equivalent to computerNumber, then we want Alexa to say something along the lines of “Congrats”. 
+
+8. On the other hand, if they are not equivalent, we want to say something like “Try again”
+9. So our final code should look something like this
+
+		'GuessI
+
+
+	
+Save and test!
+
 
 ## Testing:
 
