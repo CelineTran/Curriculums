@@ -15,18 +15,23 @@ Amazon Developer Console (ADC, Front-End)
 4. Click “Invocation” 
    Enter a unique “Skill Invocation Name”
    “guessing game celine” 
-
+   
 5. Click “Add” next to “Intents” 
    Add your first custom intent, (call it “GuessIntent”)
    Click “Create Custom Intent”
+   
+6. Adding “Sample Utterances” with slots 
+    Slots are basically a placeholder for difference values. So we want to add one that holds the value of the user’s guess. We do so like this: 
+    “My guess is {myNumber}”
+    “I guess {myNumber}” 
 
-6. Adding “Sample Utterances” with slots like
-   “My guess is {myNumber}”
-   “I guess {myNumber}” 
+7. For the slot we just added, we need to give it a type
+   Scrolling down, you’ll see the slot we just created
+   For slot type, we want to choose “AMAZON.NUMBER” 
 
-7. Click “Save Model” at the top
-8. Scroll down to “Endpoint” and select “AWS Lambda ARN” 
-9. Switch over to AWS Lambda
+8. Click “Save Model” at the top
+9. Scroll down to “Endpoint” and select “AWS Lambda ARN” 
+10. Switch over to AWS Lambda
 
 ## Creating a function and connecting “Endpoints”:
 
