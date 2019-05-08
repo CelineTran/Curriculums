@@ -25,14 +25,11 @@ const handlers = {
     'GuessIntent': function () {
         var userGuess = this.event.request.intent.slots.myGuess.value; 
         var speechOutput; 
-        if(userGuess == this.attributes.myNumber){
+        if(userGuess == this.attributes.computerNumber){
             speechOutput = "You are correct!"; 
         }
-        else if(userGuess > this.attributes.myNumber){
-            speechOutput = "Too high, try again!"; 
-        }
         else {
-            speechOutput = "Too low, try again!"; 
+            speechOutput = "Sorry, Try again."; 
         }
         var speechReprompt = "";
         this.response.speak(speechOutput).listen(speechReprompt);
