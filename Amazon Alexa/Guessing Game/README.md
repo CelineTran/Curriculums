@@ -85,7 +85,7 @@ https://github.com/CelineTran/Curriculums/tree/master/Amazon%20Alexa/NodeJs_Temp
 2. Now we must add an “Attribute” 
    Attributes make a variable within one intent, “global”, allowing the scope of this variable to be extended to the entire      program. This “attribute” will hold the computer’s random number between 1-10. To do so we add this code under our speechOuput. 
 
-Math.random() creates a number between 0 and 1, so we first need to multiply that by 10 to expand our range to 0-10. We then need to add 1 so that we get ranges 1(inclusive)-11(exclusive) -> [1,11). So finally, we need to turn it into an integer (whole number) by using Math.floor(). 
+   Math.random() creates a number between 0 and 1, so we first need to multiply that by 10 to expand our range to 0-10. We then need to add 1 so that we get ranges 1(inclusive)-11(exclusive) -> [1,11). So finally, we need to turn it into an integer (whole number) by using Math.floor(). 
 
 	this.attributes.computerNumber = Math.floor(Math.random()*10+1); 
 
@@ -115,9 +115,19 @@ The most crucial part of the If-Else Statements is the condition. In our guessin
 8. On the other hand, if they are not equivalent, we want to say something like “Try again”
 9. So our final code should look something like this
 
-		'GuessI
-
-
+		'GuessIntent': function(){
+			var userGuess = this.event.request.intent.slots.myGuess.value; 
+        		var speechOutput; 
+       		 	if(userGuess == this.attributes.computerNumber){
+            			speechOutput = "You are correct!"; 
+        		}
+        		else {
+            			speechOutput = "Sorry, Try again."; 
+       			}
+        		var speechReprompt = "";
+        		this.response.speak(speechOutput).listen(speechReprompt);
+        		this.emit(':responseReady');
+		},
 	
 9. Save and test!
 
