@@ -119,7 +119,7 @@ The most crucial part of the If-Else Statements is the condition. In our guessin
 
 
 	
-Save and test!
+9. Save and test!
 
 
 ## Testing:
