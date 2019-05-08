@@ -20,7 +20,7 @@ Amazon Developer Console (ADC, Front-End)
    Add your first custom intent, (call it “GuessIntent”)
    Click “Create Custom Intent”
    
-6. Adding “Sample Utterances” with slots 
+6. Adding “Sample Utterances” with slots.
 	Slots are basically a placeholder for difference values. So we want to add one that holds the value of the user’s guess. We do so like this: 
     “My guess is {myNumber}”
     “I guess {myNumber}” 
