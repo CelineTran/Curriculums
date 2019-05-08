@@ -13,8 +13,8 @@ Amazon Developer Console (ADC, Front-End)
 2. Select “custom” as your model
 3. Select “Start from Scratch” when prompted to choose a template
 4. Click “Invocation” 
-   Enter a unique “Skill Invocation Name”
-   “guessing game celine” 
+Enter a unique “Skill Invocation Name”
+“guessing game celine” 
    
 5. Click “Add” next to “Intents” 
    Add your first custom intent, (call it “GuessIntent”)
